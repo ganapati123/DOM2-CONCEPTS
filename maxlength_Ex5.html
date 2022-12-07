@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <script>
+        function myfun(){
+           var input_dom = document.getElementById('uname')
+
+            var span_dom = document.getElementById('span_uname')
+
+            span_dom.innerHTML=(`total chars:${input_dom.value.length}`)
+       
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="mb-3">
+            <label class="form-label">Name:</label>
+            <input type="text" maxlength="50" class="form-control" id="uname" value="gana" onkeyup="myfun()"/>
+            <output id="span_uname">0</output>/50
+          </div>
+          <div class="mb-3">
+            <button type="button" onclick="myfun()" class="btn btn-primary">Read_Response</button>
+          </div>
+    </div>
+</body>
+</html>

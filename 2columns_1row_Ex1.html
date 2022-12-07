@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+     <style>
+        .form-control
+        {
+            height: 600px;
+            resize: none;
+            border: groove lightgray 10px;
+
+        }
+        
+     </style>
+    <script>
+        function myfun()
+        {
+            var textarea_dom = document.getElementById('input_src')
+            
+            var output_dom = document.getElementById('output_src')
+
+            output_dom.innerHTML = textarea_dom.value
+
+        }
+    </script>
+</head>
+<body>
+    <div class="container py-5">
+       <div class="row">
+        <div class="col-lg-6">
+         <div class="mb-3">
+           <label class="form-label">Enter_SourceCode</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <button class="btn btn-primary" onclick="myfun()">RUN</button>
+         </div>
+           <textarea class="form-control" id="input_src" type="text"></textarea>
+        </div>
+        <div class="col-lg-6">
+            <h4>RESULT</h4>
+           <output id="output_src"></output>
+        </div>
+       </div>
+    </div>
+</body>
+</html>
